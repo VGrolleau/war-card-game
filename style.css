@@ -7,38 +7,71 @@
 body {
     margin: 0;
     padding-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: 8rem 4rem 14rem 2rem 2rem 4rem 14rem 2rem;
-    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: 8rem 4rem 14rem 2rem 2rem 4rem 14rem 2rem; */
+    /* gap: .5rem; */
     justify-content: center;
+    align-items: center;
     background: center / cover fixed no-repeat url('img/game.jpg');
 }
 
 .text {
-    grid-column: span 4;
-    display: flex;
+    /* grid-column: span 4; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     text-transform: uppercase;
+    text-align: center;
+    height: 2rem;
+}
+
+.container {
+    text-align: center;
+    width: 20rem;
+}
+
+.computer-container {
+    margin-bottom: 10px;
+}
+
+.player-container {
+    margin-top: 10px;
 }
 
 .computer-title,
 .player-title {
     font-weight: bold;
+    height: 2rem;
 }
 
 .top {
+    /* flex-direction: column; */
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 4rem;
+}
+
+.decks {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 14rem;
 }
 
 .deck {
-    grid-column: span 2;
+    /* grid-column: span 2; */
+    position: relative;
     cursor: pointer;
+    width: 8rem;
     height: 100%;
-    width: 100%;
+    margin: auto;
     border-radius: .5rem;
-    background-size: 100%;
+    /* background-size: 100%; */
 }
 
 .computer-deck {
@@ -51,14 +84,10 @@ body {
     background: center / contain no-repeat url('img/penguin.png'), lightblue;
 }
 
-.card-slot {
-    grid-column: span 2;
-}
-
 .card {
     position: relative;
-    height: 100%;
-    width: 100%;
+    width: 8rem;
+    height: 14rem;
     border-radius: .5rem;
     background-color: beige;
     display: flex;
@@ -93,8 +122,16 @@ body {
     transform: rotate(180deg);
 }
 
+.card-slot {
+    position: relative;
+    margin: auto;
+    /* right: -10px; */
+}
+
 .card-stay {
-    grid-column: span 4;
+    /* grid-column: span 4; */
     user-select: none;
     text-align: center;
+    height: 2rem;
+    margin-top: 10px;
 }

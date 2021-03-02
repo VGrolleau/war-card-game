@@ -23,6 +23,7 @@ const playerDeckElement = document.querySelector('.player-deck');
 const computerCardStayElement = document.querySelector('.computer-card-stay');
 const playerCardStayElement = document.querySelector('.player-card-stay');
 const text = document.querySelector('.text');
+const containerGame = document.querySelector('.container');
 let playerDeck, computerDeck, inRound, stop;
 
 document.addEventListener('click', () => {
@@ -41,6 +42,7 @@ document.addEventListener('click', () => {
 startGame();
 
 function startGame() {
+    // containerGame.style.display = 'inline-block';
     const deck = new Deck();
     deck.shuffle();
 
@@ -83,7 +85,7 @@ function flipCards() {
         computerDeck.push(computerCard);
     } else {
         text.innerText = 'Égalité';
-        playererDeck.push(playerCard);
+        playerDeck.push(playerCard);
         computerDeck.push(computerCard);
     }
 

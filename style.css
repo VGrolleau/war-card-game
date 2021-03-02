@@ -9,19 +9,12 @@ body {
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    /* grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: 8rem 4rem 14rem 2rem 2rem 4rem 14rem 2rem; */
-    /* gap: .5rem; */
     justify-content: center;
     align-items: center;
     background: center / cover fixed no-repeat url('img/game.jpg');
 }
 
 .text {
-    /* grid-column: span 4; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     text-transform: uppercase;
     text-align: center;
     height: 2rem;
@@ -44,10 +37,10 @@ body {
 .player-title {
     font-weight: bold;
     height: 2rem;
+    text-shadow: 1px 1px beige;
 }
 
 .top {
-    /* flex-direction: column; */
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -64,14 +57,12 @@ body {
 }
 
 .deck {
-    /* grid-column: span 2; */
     position: relative;
     cursor: pointer;
     width: 8rem;
     height: 100%;
     margin: auto;
     border-radius: .5rem;
-    /* background-size: 100%; */
 }
 
 .computer-deck {
@@ -125,11 +116,9 @@ body {
 .card-slot {
     position: relative;
     margin: auto;
-    /* right: -10px; */
 }
 
 .card-stay {
-    /* grid-column: span 4; */
     user-select: none;
     text-align: center;
     height: 2rem;

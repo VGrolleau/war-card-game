@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: 8rem 4rem 14rem 2rem 2rem 4rem 14rem 2rem;
+    gap: .5rem;
+    justify-content: center;
+    background: center / cover fixed no-repeat url('img/game.jpg');
+}
+
+.text {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.computer-title,
+.player-title {
+    font-weight: bold;
+}
+
+.top {
+    flex-direction: column;
+}
+
+.deck {
+    grid-column: span 2;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    background-size: 100%;
+}
+
+.computer-deck {
+    border: 1px solid lightgreen;
+    background: center / contain no-repeat url('img/penguin.png'), lightgreen;
+}
+
+.player-deck {
+    border: 1px solid lightblue;
+    background: center / contain no-repeat url('img/penguin.png'), lightblue;
+}
+
+.card-slot {
+    grid-column: span 2;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+
+.card.red {
+    color: red;
+}
+
+.card.black {
+    color: black;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: attr(data-value);
+    font-size: 1.5rem;
+}
+
+.card::before {
+    top: .5rem;
+    left: .5rem;
+}
+
+.card::after {
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+
+.card-stay {
+    grid-column: span 4;
+    user-select: none;
+    text-align: center;
+}
